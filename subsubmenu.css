@@ -1,0 +1,281 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+body{
+background-color: bisque;
+box-sizing: border-box;
+font-family: sans-serif;
+}
+.close{
+    position: absolute;
+    top: -45px;
+    display:none ;
+}
+.open{
+    position: absolute;
+    right: -12px;
+    display: none;
+}
+.menu-bar{
+    width: 100%;
+    position: absolute;
+    background: black;
+    text-align: center;
+    margin-bottom: 200px;
+}
+.menu-bar ul{
+    width: 30%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(11,1fr);
+    grid-template-rows: 1fr;
+    color: aliceblue;
+    list-style: none;
+    left: -30px;
+}
+.menu-bar ul li{
+    width: 50%;
+    margin: 15px;
+    padding: 15px;
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.active,.menu-bar ul li:hover{
+background: #b7ccb3;
+border-radius: 3px;
+}
+.sub-menu1{
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu1{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    position: absolute;
+    background:violet
+    margin-top: 15px;
+    margin-left: -15px;
+    /*left: 90px;*/
+}
+.menu-bar ul li:hover .plus{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    position: absolute;
+    background: violet;
+    margin-top: 15px;
+    margin-left: -250px;
+    /*left: 90px;*/
+}
+.menu-bar ul li:hover .sub-menu1 ul{
+    display: block;
+    margin-top: 3px;
+
+}
+.menu-bar ul li:hover .sub-menu1 ul li{
+    width: 100px;
+    background: transparent;
+    text-align: left;
+    padding-left: 50px;
+
+}
+.menu-bar ul li:hover .sub-menu1 ul li a{
+   padding-left: none;
+
+}
+.menu-bar ul li:hover .sub-menu1 ul li:hover{
+background:rgb(0, 100, 0);
+
+}
+
+.menu-bar ul li:hover .sub-menu1 ul li:last-child{
+    border-bottom:none ;
+}
+
+@media screen and (max-width:1200px) {
+    .menu-bar{
+        width: 100%;  
+        height: 1100px;
+        background: rgb(0, 100, 0);
+        text-align: center;
+    }
+    .menu-bar ul{
+        position: relative;
+        width: 14%;
+        height: 500px;
+       display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(10,1fr);
+        color: rgb(240, 255, 240);
+        list-style: none;
+        margin-top: 2px;
+        left: -100%;
+       
+    }
+    .menu-bar ul li{
+        width: 10%;
+        margin: 1px;
+        padding: 25px;
+    }
+    .menu-bar ul li:hover .sub-menu1 ul li{
+        margin-top: none;
+        text-align: left;
+        width: 100px;
+        margin-left: 0;
+    
+    }
+    .menu-bar ul li:hover .sub-menu1 ul li a{
+        margin-top: none;
+        text-align: left;
+        width: 20px;
+        margin-left: 0;
+    
+    }
+    .menu-bar ul li{
+        width: 100%;
+        margin: none;
+        padding: none;
+    }
+    .menu-bar ul li:hover .sub-menu1{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(5,1fr);
+        background: rgb(0, 100, 0);
+        width: 200px;
+        position: absolute;
+        margin-top: -40px;
+        margin-left: 280px;      
+        /*left: 90px;*/
+    }
+    .menu-bar ul li:hover .sub-menu1 ul{
+        display: block;
+        position: relative;
+        width: 150px;
+        height: 50px;
+        padding: none;
+        margin-left: none;
+        background: transparent;
+        text-align: left;
+    }
+    .menu-bar ul li:hover .sub-menu1 ul li:hover{
+    background: #2bab0d;
+    
+    }
+    .close{
+        position: relative;
+         top: 3%;
+        cursor: pointer;
+        display: block;
+    }
+    .open{
+
+        position: absolute;
+        display: block;
+        right: 4rem;
+        top: 4rem;
+        cursor: pointer;
+        color: aliceblue;
+    }
+    .menu-bar li a{
+        text-transform: uppercase;
+    }
+
+
+    
+}
+
+
+
+@media screen and (max-width:500px) {
+    .menu-bar{
+        width: 100%;  
+        height: 1900px;
+        background: rgb(0, 100, 0);
+        text-align: center;
+    }
+    .menu-bar ul{
+        position: relative;
+        width: 20%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(10,1fr);
+        color: rgb(240, 255, 240);
+        list-style: none;
+        margin-top: 2px;
+        left: -100%;
+       
+    }
+    .menu-bar ul li{
+        width: 20%;
+        margin-right: 3px;
+        padding-right: 25px;
+    }
+    .menu-bar ul li:hover .sub-menu1 ul li{
+        margin-top: none;
+        text-align: left;
+        width: 200px;
+        margin-left: 0;
+    
+    }
+    .menu-bar ul li:hover .sub-menu1 ul li a{
+        margin-top: none;
+        text-align: left;
+        width: 20px;
+        margin-left: 0;
+    
+    }
+    .menu-bar ul li{
+        width: 60%;
+        margin: none;
+        padding: none;
+    }
+    .menu-bar ul li:hover .sub-menu1{
+        display: grid;
+        width: 100px;
+        height: 100px;
+        grid-template-columns:1fr 1fr;
+        grid-auto-rows: 100px;
+        position: absolute;
+        margin-left: 240px;
+      
+        /*left: 90px;*/
+    }
+    .menu-bar ul li:hover .sub-menu1 ul{
+        display: block;
+        position: relative;
+        width: 150px;
+        height: 250px;
+        padding: none;
+        margin-left: none;
+        background: transparent;
+        text-align: left;
+        background: rgb(0, 100, 0);    }
+    .menu-bar ul li:hover .sub-menu1 ul li a:hover{
+    background: #2bab0d;
+    
+    }
+    .close{
+        position: relative;
+         top: 3%;
+        cursor: pointer;
+        display: block;
+    }
+    .open{
+
+        position: absolute;
+        display: block;
+        right: 4rem;
+        top: 3rem;
+        cursor: pointer;
+    }
+    .menu-bar li a{
+        text-transform: uppercase;
+    }
+
+
+    
+}
+
+

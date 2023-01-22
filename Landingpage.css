@@ -1,0 +1,15 @@
+body,html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.mre{
+    background-image: url(/photos/Backgroundimage/photo_2023-01-12_21-27-03.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size:cover;
+height: 100%;
+
+
+}

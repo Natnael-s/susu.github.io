@@ -1,0 +1,82 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+
+}
+ img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+ }
+
+ .heroimage{
+background-image:url(/photos/Backgroundimage/back3edited.jpg);
+background-size:cover;
+background-repeat: no-repeat;
+overflow: hidden;
+height:600px;
+
+ }
+ .herotext{
+    position: absolute;
+     top:50%;
+     left: 50%;
+     text-align:center;
+    color: white;
+    transform: translate(-50%,-50%);
+    font-weight: 700;
+    
+    
+    
+ }
+ .herotext h1 span{
+    font-size: 100px;
+    color: whitesmoke
+ }
+.imageNavBar{
+ display: grid;
+ grid-template-columns: repeat(2,minmax(200px,664px)) ;
+ grid-template-rows: repeat(2,minmax(200px,674px)) ;
+ background-color: black;
+ gap:50px;
+}
+.Accesories{
+    margin-left: 70px;
+    margin-top: 40px;
+}
+.Shoes{
+    margin-top:40px;
+     margin-right: 40px;
+    
+}
+.Clothings{
+    margin-left: 70px;
+    margin-bottom: 40px;
+    
+}
+.kids{
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+.Description{
+    display: grid; 
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,);
+    grid-template-areas: "a a a  "
+     "b b b "
+     "c c c ";
+    background-color: black; 
+    gap: 40px;
+}
+.word_description{
+    font-size: 20px;
+    color: white; 
+    grid-area:b;
+    
+}
+.imagedescription{
+    grid-area: a;
+
+}
